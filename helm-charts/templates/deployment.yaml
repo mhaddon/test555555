@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: test555555
+  namespace: {{ .Release.Namespace }}
+  labels:
+    app: test555555
+spec:
+  selector:
+    matchLabels:
+      app: test555555
+  template:
+    metadata:
+      labels:
+        app: test555555
+    spec:
+      serviceAccountName: test555555
+      containers:
+        - name: test555555
+          image: nginx:stable
+          imagePullPolicy: Always
+          ports:
+            - name: http
+              containerPort: 80
+              protocol: TCP
+          resources:
+            requests:
+              memory: "128Mi"
+              cpu: "100m"
+            limits:
+              memory: "256Mi"
+              cpu: "200m"

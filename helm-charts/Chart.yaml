@@ -1,0 +1,7 @@
+apiVersion: v2
+appVersion: 1.16.0
+description: |
+  Provisions the core
+name: test555555
+type: application
+version: 0.1.0
